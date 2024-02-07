@@ -2,6 +2,7 @@ site_name: Pim Wiki
 site_url: https://wiki.pim.gr.jp/
 repo_url: https://github.com/shimane-u-pim/wiki
 repo_name: shimane-u-pim/wiki
+edit_uri: edit/master/docs/
 site_author: 島根大学ものづくり部 Pim, Pim Wiki Authors
 copyright: Copyright (c) 2024 島根大学ものづくり部 Pim, Pim Wiki Authors
 validation:
@@ -59,6 +60,8 @@ theme:
   language: ja
   palette:
     primary: red
+  features:
+    - content.action.edit
 
 extra_css: 
   - "_assets/css/admonitions.css"
