@@ -1,0 +1,33 @@
+.md-typeset .admonition.important,
+.md-typeset details.important {
+    border-color: #8957e5;
+
+    > .admonition-title,
+    > summary {
+        background-color: rgba(137, 87, 229, 0.1);
+    }
+
+    > .admonition-title::before,
+    > summary::before {
+        background-color: #8957e5;
+        -webkit-mask-image: var(--md-admonition-icon--important);
+        mask-image: var(--md-admonition-icon--important);
+    }
+}
+
+.md-typeset .admonition.caution,
+.md-typeset details.caution {
+    border-color: #da3633;
+
+    > .admonition-title,
+    > summary {
+        background-color: rgba(218, 54, 51, 0.1);
+    }
+
+    > .admonition-title::before,
+    > summary::before {
+        background-color: #da3633;
+        -webkit-mask-image: var(--md-admonition-icon--important);
+        mask-image: var(--md-admonition-icon--important);
+    }
+}
