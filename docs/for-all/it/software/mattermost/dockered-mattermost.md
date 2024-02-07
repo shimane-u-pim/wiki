@@ -54,3 +54,49 @@ Dockerはコンテナであり、このコンテナ内から外にはアクセ�
 Docker上のデータを保持したい場合、手法は様々あるが最も簡単なのはHost Mountである。
 親機の特定のディレクトリもしくはファイルを、Dockerコンテナ内の任意の場所にそのまま配置し、内容を同期する。
 これにより、データをホストに退避させることが可能である。
+
+## MattermostのDockerイメージ
+
+MattermostはDockerでの運用が可能である。
+Dockerで運用する場合、Mattermostの更新はDockerイメージの更新で行うため、
+非常に手軽に更新ができる。
+
+> [!NOTE]
+> この後にインストールなどの詳細な手順が続くが、
+> 必ず[公式ドキュメント](https://docs.mattermost.com/install/install-docker.html)を参照し、常に最新の情報を確認すること。
+> 本記事において紹介する手法は、必ずしも最新版に適合せず、また、非推奨の項目が含まれている場合がある。
+
+MattermostのDockerイメージは[公式のDocker Hub](https://hub.docker.com/u/mattermost/)で提供されている。
+
+無料版であるTeamエディションは、
+基本的に[mattermost/mattermost-team-edition](https://hub.docker.com/r/mattermost/mattermost-team-edition)イメージを使うことになる。
+
+Dockerのタグ（バージョン情報）はMattermostのリリースバージョンに合わせられている。
+
+### 想定されるExpose
+
+Mattermostは下記のポートを利用する
+
+- 8065: Mattermostサーバー (必須、リバースプロキシ等で80/tcpや443/tcp+tlsに転送することが多い)
+- 8075: [Performance Metrics](https://docs.mattermost.com/scale/performance-monitoring.html) (プロファイルやメモリヒープ等を確認したい場合のみ。詳細はドキュメントを参照すること)
+- 8443/udp: 通話機能 (純正のCallsを利用する場合のみ必要)
+- 8443/tcp: 通話機能 (純正のCallsを利用する場合のみ必要)
+- 8045/tcp: 通話機能 (純正のCallsを利用する場合のみ必要)
+- 3478/udp: 通話機能 (純正のCallsを利用する場合のみ必要)
+
+通話機能に関する詳細は、公式ドキュメントの[Calls self-hosted deployment](https://docs.mattermost.com/configure/calls-deployment.html)を参考にすること。
+
+利用ポートとその用途は、公式ドキュメントの[Architecture overview](https://docs.mattermost.com/getting-started/architecture-overview.html)を参考にすること。
+また、このドキュメントには、Mattermostが必要な通信ポートの一覧が記載されている。
+必要最低限のネットワーク上で構築したい場合は、このドキュメントを参照すること。
+
+### 想定されるHost Mount
+
+下記のディレクトリをホストマシンにマウントすることが想定される。
+
+- /mattermost/config: Mattermostの設定ファイル（必須）
+- /mattermost/data: Mattermostのデータ（S3だと不要？要検証）
+- /mattermost/logs: Mattermostのログ（任意、Dockerのログ出力から取ることが可能）
+- /mattermost/plugins: Mattermostのプラグイン（強く推奨）
+- /mattermost/client/plugins: Mattermostのクライアントプラグイン（強く推奨）
+- /mattermost/bleve-indexes: Mattermostの[Bleve検索](https://docs.mattermost.com/deploy/bleve-search.html)インデックス（推奨）
