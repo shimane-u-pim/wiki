@@ -3,3 +3,4 @@ mkdocs-mermaid2-plugin
 mkdocs-minify-plugin
 mkdocs-material
 mkdocs-callouts
+mkdocs-git-revision-date-localized-plugin
