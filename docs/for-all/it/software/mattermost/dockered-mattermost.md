@@ -94,9 +94,9 @@ Mattermostは下記のポートを利用する
 
 下記のディレクトリをホストマシンにマウントすることが想定される。
 
-- /mattermost/config: Mattermostの設定ファイル（必須）
-- /mattermost/data: Mattermostのデータ（S3だと不要？要検証）
-- /mattermost/logs: Mattermostのログ（任意、Dockerのログ出力から取ることが可能）
-- /mattermost/plugins: Mattermostのプラグイン（強く推奨）
-- /mattermost/client/plugins: Mattermostのクライアントプラグイン（強く推奨）
-- /mattermost/bleve-indexes: Mattermostの[Bleve検索](https://docs.mattermost.com/deploy/bleve-search.html)インデックス（推奨）
+- `/mattermost/config`: Mattermostの設定ファイル（必須）
+- `/mattermost/data`: Mattermostのデータ（S3だと不要？要検証）
+- `/mattermost/logs`: Mattermostのログ（任意、Dockerのログ出力から取ることが可能）
+- `/mattermost/plugins`: Mattermostのプラグイン（強く推奨）
+- `/mattermost/client/plugins`: Mattermostのクライアントプラグイン（強く推奨）
+- `/mattermost/bleve-indexes`: Mattermostの[Bleve検索](https://docs.mattermost.com/deploy/bleve-search.html)インデックス（推奨）
