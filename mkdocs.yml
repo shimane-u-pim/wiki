@@ -71,14 +71,14 @@ extra_css:
   - "_assets/css/admonitions.css"
 
 nav:
-  - Home: index.md
+  - Home: README.md
   - 入部について: for-student/club/pim/join-pim.md
   - 部員向けサービス情報:
     - Mattermost (部内チャット): for-member/intra-tools/mattermost/mattermost.md
-    - GitHub (ソースコード管理): for-member/intra-tools/github-saas/github.md
+    #- GitHub (ソースコード管理): for-member/intra-tools/github-saas/github.md
     - さくらのメールボックス (部内メール): for-member/email/sakura-mail.md
     - 部内共有PC: for-member/intra-tools/shared-pc/landing.md
   - このWikiについて:
-    - Playgrounds: for-all/this-wiki/playground/index.md
+    - Playgrounds: for-all/this-wiki/playground/README.md
   - 全体向け技術情報:
-    - ソフトウェア: for-all/it/software/index.md
+    - ソフトウェア: for-all/it/software/README.md
