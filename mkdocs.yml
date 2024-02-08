@@ -1,10 +1,11 @@
 site_name: Pim Wiki
-site_url: https://wiki.pim.gr.jp/
+site_url: !ENV [SITE_URL, 'https://wiki.pim.gr.jp/']
 repo_url: https://github.com/shimane-u-pim/wiki
 repo_name: shimane-u-pim/wiki
 edit_uri: edit/master/docs/
 site_author: 島根大学ものづくり部 Pim, Pim Wiki Authors
 copyright: Copyright (c) 2024 島根大学ものづくり部 Pim, Pim Wiki Authors
+use_directory_urls: false
 validation:
   nav:
    omitted_files: info
@@ -46,6 +47,9 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - toc:
+      permalink: "#"
+      slugify: !!python/name:markdown.extensions.toc.slugify_unicode
 theme:
   name: material
   icon:
@@ -56,12 +60,25 @@ theme:
       warning: octicons/alert-16
       caution: octicons/stop-16
     repo: fontawesome/brands/github
-  logo: _assets/logo/pimlogo.svg
+  logo: _assets/logo/pimlogo-bg-round.svg
   language: ja
   palette:
-    primary: red
+    primary: pink
   features:
     - content.action.edit
 
 extra_css: 
   - "_assets/css/admonitions.css"
+
+nav:
+  - Home: index.md
+  - 入部について: for-student/club/pim/join-pim.md
+  - 部員向けサービス情報:
+    - Mattermost (部内チャット): for-member/intra-tools/mattermost/mattermost.md
+    - GitHub (ソースコード管理): for-member/intra-tools/github-saas/github.md
+    - さくらのメールボックス (部内メール): for-member/email/sakura-mail.md
+    - 部内共有PC: for-member/intra-tools/shared-pc/landing.md
+  - このWikiについて:
+    - Playgrounds: for-all/this-wiki/playground/index.md
+  - 全体向け技術情報:
+    - ソフトウェア: for-all/it/software/index.md

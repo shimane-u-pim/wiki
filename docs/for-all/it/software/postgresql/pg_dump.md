@@ -83,7 +83,7 @@ Ubuntu等に直接インストールされたPostgreSQL等であれば、
 
 以下は、Mattermostで使われているConnection Stringです。
 
-```
+```url
 postgres://mm_db_user:mm_db_password@db_host/db_name?sslmode=disable\u0026connect_timeout=10\u0026binary_parameters=yes
 ```
 
