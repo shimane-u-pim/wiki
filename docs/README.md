@@ -5,11 +5,15 @@
 
 コントリビューションも歓迎しています。
 
+## 学生向けリンク集
+
+- [Pimへの入部について](for-student/club/pim/join-pim.md)
+
 ## 部員向けリンク集
 
 - [Mattermostの利用について](for-member/intra-tools/mattermost/mattermost.md)
 - [Pim内部メールアドレス](for-member/email/sakura-mail.md)
 
-### 外部リンク
+## 外部リンク
 
 - [Webメール (さくらのメールボックス)](https://secure.sakura.ad.jp/rscontrol/?webmail=1)
