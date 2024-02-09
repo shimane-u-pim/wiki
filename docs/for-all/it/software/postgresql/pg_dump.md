@@ -77,8 +77,8 @@ Ubuntu等に直接インストールされたPostgreSQL等であれば、
 > [!TIPS]
 > `sudo -u postgres`を利用する場合、この構文は`docker-compose exec`と同じ意味を持ちます。
 >
-> `sudo -u postgres pg_dump -U mattermost_db_user -F p mattermost_db > db_dump.sql`を実行した場合、
-> `pg_dump -U mattermost_db_user -F p mattermost_db`を`sudo`コマンドが`postgres`ユーザ（PostgreSQLに対しての事実上の特権ユーザ）として実行し、
+> `sudo -u postgres pg_dump -F p mattermost_db > db_dump.sql`を実行した場合、
+> `pg_dump -F p mattermost_db`を`sudo`コマンドが`postgres`ユーザ（PostgreSQLに対しての事実上の特権ユーザ）として実行し、
 > その結果を`> db_dump.sql`の部分で、ファイルにリダイレクトするような命令になります。
 
 以下は、Mattermostで使われているConnection Stringです。
