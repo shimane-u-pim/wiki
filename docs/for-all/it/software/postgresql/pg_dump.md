@@ -74,7 +74,7 @@ Ubuntu等に直接インストールされたPostgreSQL等であれば、
 特権的に接続できないDBで、接続情報が分からない・新たに払い出されない場合、
 よく使われるConnection Stringから情報を取得する事ができます。
 
-> [!TIPS]
+> [!TIP]
 > `sudo -u postgres`を利用する場合、この構文は`docker-compose exec`と同じ意味を持ちます。
 >
 > `sudo -u postgres pg_dump -F p mattermost_db > db_dump.sql`を実行した場合、
@@ -99,7 +99,7 @@ Connection Stringは多くの場合、`postgres://`から始まります。
 ホスト名は`/`までの文字列になります。
 この場合、`db_host`がホスト名になります。
 
-> [!TIPS]
+> [!TIP]
 > Docker Composeの場合、Service名をホスト名として利用できます。
 
 `/`以降の文字列はDB名になります。
