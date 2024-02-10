@@ -3,3 +3,4 @@
 - [Mattermost](mattermost/README.md)
 - [PostgreSQL](postgresql/README.md)
 - [APT（Debian系ディストリのパッケージ管理）](debian/apt.md)
+- [一般的なLinux](linux-general/README.md)
