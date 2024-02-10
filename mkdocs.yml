@@ -43,10 +43,12 @@ plugins:
       #  target: _blank
   - git-revision-date-localized:
       enable_creation_date: true
+  - include_dir_to_nav
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - footnotes
   - toc:
       permalink: "#"
       slugify: !!python/name:markdown.extensions.toc.slugify_unicode
@@ -96,5 +98,4 @@ nav:
     - Playgrounds: for-all/this-wiki/playground/README.md
   - 全体向け技術情報:
     - ソフトウェア: for-all/it/software/README.md
-  - 辞書:
-    - 情報系辞書: for-all/dictionary/it.md
+  - 辞書: for-all/dictionary/
