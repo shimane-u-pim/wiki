@@ -1,6 +1,9 @@
 # Pim Wiki
 
-このWikiでは、Pim内部ツールの利用方法屋運用方法、
+[![Static Badge](https://img.shields.io/badge/build-www.pim.gr.jp-brightgreen?logo=cloudflare&label=Cloudflare%20Pages&link=https%3A%2F%2Fwiki.pim.gr.jp)](https://wiki.pim.gr.jp/)
+[![Publish to GitHub Pages](https://github.com/shimane-u-pim/wiki/actions/workflows/publish-ghpages.yml/badge.svg)](https://github.com/shimane-u-pim/wiki/actions/workflows/publish-ghpages.yml)
+
+このWikiでは、Pim内部ツールの利用方法や運用方法、
 また、Pim内部で利用されている技術情報の保管を行っています。
 
 コントリビューションも歓迎しています。
