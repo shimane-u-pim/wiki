@@ -95,7 +95,9 @@ nav:
     - さくらのメールボックス (部内メール): for-member/email/sakura-mail.md
     - 部内共有PC: for-member/intra-tools/shared-pc/landing.md
   - このWikiについて:
-    - Playgrounds: for-all/this-wiki/playground/README.md
+      - 投稿する: for-all/this-wiki/post/
+      - Playground: for-all/this-wiki/playground/
+      - 管理者向け: for-all/this-wiki/for-pim-wiki-managers/
   - 全体向け技術情報:
     - ソフトウェア: for-all/it/software/README.md
   - 辞書: for-all/dictionary/
